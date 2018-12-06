@@ -1,7 +1,6 @@
 import os
 import csv
-from pathlib 
-import Path 
+from pathlib import Path 
 
 # assign file location with the pathlib library
 csv_file_path = "hw3-election_data.csv"
@@ -14,7 +13,7 @@ li_votes = 0
 otooley_votes = 0
 
 #now open the file in csvreader
-with open(csv_file_path, newline=") as elections:
+with open(csv_file_path, newline="") as elections:
 
     # sore data under the csvreader variable
     csvreader = csv.reader(elections, delimiter=",") 
@@ -65,29 +64,28 @@ print(f"Winner: {key}")
 print(f"----------------------------")
 
 #asign output file location
-output_file = Election_Results_Summary.txt
+output_file = "Election_Results_Summary.txt"
 
 with open(output_file,"w") as file:
 
 # write to output file 
-file.write(f"Election Results")
-file.write("\n")
-file.write(f"----------------------------")
-file.write("\n")
-file.write(f"Total Votes: {total_votes}")
-file.write("\n")
-file.write(f"----------------------------")
-file.write("\n")
-file.write(f"Khan: {khan_percent:.3f}% ({khan_votes})")
-file.write("\n")
-file.write(f"Correy: {correy_percent:.3f}% ({correy_votes})")
-file.write("\n")
-file.write(f"Li: {li_percent:.3f}% ({li_votes})")
-file.write("\n")
-file.write(f"O'Tooley: {otooley_percent:.3f}% ({otooley_votes})")
-file.write("\n")
-file.write(f"----------------------------")
-file.write("\n")
-file.write(f"Winner: {key}")
-file.write("\n")
-file.write(f"----------------------------")
+    file.write(f"Election Results")
+    file.write(f"----------------------------")
+    file.write("\n")
+    file.write(f"Total Votes: {total_votes}")
+    file.write("\n")
+    file.write(f"----------------------------")
+    file.write("\n")
+    file.write(f"Khan: {khan_percent:.3f}% ({khan_votes})")
+    file.write("\n")
+    file.write(f"Correy: {correy_percent:.3f}% ({correy_votes})")
+    file.write("\n")
+    file.write(f"Li: {li_percent:.3f}% ({li_votes})")
+    file.write("\n")
+    file.write(f"O'Tooley: {otooley_percent:.3f}% ({otooley_votes})")
+    file.write("\n")
+    file.write(f"----------------------------")
+    file.write("\n")
+    file.write(f"Winner: {key}")
+    file.write("\n")
+    file.write(f"----------------------------")
